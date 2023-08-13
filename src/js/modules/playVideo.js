@@ -12,7 +12,8 @@ export default class VideoPlayer {
           this.overlay.style.display = 'flex';
         } else {
           const path = btn.getAttribute('data-url');
-          this.createPlayer(path);
+          // this.createPlayer(path);
+          this.createPlayer('dQw4w9WgXcQ');
         }
       });
     });

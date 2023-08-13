@@ -1,8 +1,9 @@
 import Slider from './slider';
 
 export default class MainSlider extends Slider {
-  constructor(page, btns) {
-    super(page, btns);
+  constructor(container, btns) {
+    super(container, btns);
+    // this.paused = false;
   }
 
   showSlides(n) {
@@ -71,11 +72,11 @@ export default class MainSlider extends Slider {
     /*// Автопролистывание слайдера
     this.activateAnimation();
 
-    this.page.parentNode.addEventListener('mouseenter', () => {
+    this.container.addEventListener('mouseenter', () => {
       clearInterval(this.paused);
     });
 
-    this.page.parentNode.addEventListener('mouseleave', () => {
+    this.container.addEventListener('mouseleave', () => {
       this.activateAnimation();
     });
     */
