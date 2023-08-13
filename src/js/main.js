@@ -6,6 +6,12 @@ import Form from './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
   const slider = new MainSlider({ container: '.page', btns: '.next' });
+  const modulePageSlider = new MainSlider({
+    container: '.moduleapp',
+    btns: '.next',
+    nexts: '.nextmodule',
+    prevs: '.prevmodule',
+  });
   const showUpSlider = new MiniSlider({
     container: '.showup__content-slider',
     next: '.showup__next',
@@ -14,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     animate: true,
   });
 
-  const modulesSlider = new MiniSlider({
+  const moduleSlider = new MiniSlider({
     container: '.modules__content-slider',
     next: '.modules__info-btns .slick-next',
     prev: '.modules__info-btns .slick-prev',
@@ -35,8 +41,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const form = new Form('.form');
 
   slider.render();
+  modulePageSlider.render();
   showUpSlider.init();
-  modulesSlider.init();
+  moduleSlider.init();
   feedSlider.init();
   player.init();
   difference.init();
