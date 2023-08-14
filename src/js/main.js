@@ -36,7 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
     activeClass: 'feed__item-active',
   });
 
-  const player = new VideoPlayer('.showup .play', '.overlay');
+  const mainPlayer = new VideoPlayer('.showup .play', '.overlay');
+  const modulePlayer = new VideoPlayer('.module__video-item .play', '.overlay');
   const difference = new Difference('.officerold', '.officernew', '.officer__card-item');
   const form = new Form('.form');
 
@@ -45,7 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
   showUpSlider.init();
   moduleSlider.init();
   feedSlider.init();
-  player.init();
+  mainPlayer.init();
+  modulePlayer.init();
   difference.init();
   form.init();
 });
