@@ -8,11 +8,10 @@ export default class Download {
     const element = document.createElement('a');
     element.setAttribute('href', path);
     element.setAttribute('download', 'nice_picture');
-    
+
     element.style.display = 'none';
     document.body.appendChild(element);
 
-    element.preventDefault();
     element.click();
 
     document.body.removeChild(element);
@@ -20,6 +19,7 @@ export default class Download {
 
   init() {
     this.btns.forEach((btn) => {
+      btn.style.cursor = 'pointer';
       btn.addEventListener('click', (e) => {
         this.downloadItem(this.path);
       });
