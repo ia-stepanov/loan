@@ -3,6 +3,8 @@ import MiniSlider from './modules/slider/slider-mini';
 import VideoPlayer from './modules/playVideo';
 import Difference from './modules/difference';
 import Form from './modules/forms';
+import ShowInfo from './modules/showInfo';
+import Download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
   const slider = new MainSlider({ container: '.page', btns: '.next' });
@@ -40,6 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const modulePlayer = new VideoPlayer('.module__video-item .play', '.overlay');
   const difference = new Difference('.officerold', '.officernew', '.officer__card-item');
   const form = new Form('.form');
+  const showInfo = new ShowInfo('.plus__content');
+  const download = new Download('.download');
 
   slider.render();
   modulePageSlider.render();
@@ -50,4 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
   modulePlayer.init();
   difference.init();
   form.init();
+  showInfo.init();
+  download.init();
 });
