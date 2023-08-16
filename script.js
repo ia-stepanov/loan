@@ -80,6 +80,7 @@ class Download {
   }
   init() {
     this.btns.forEach(btn => {
+      btn.style.cursor = 'pointer';
       btn.addEventListener('click', e => {
         this.downloadItem(this.path);
       });
